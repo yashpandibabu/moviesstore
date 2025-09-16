@@ -1,0 +1,11 @@
+.DS_Store
+venv/
+__pycache__/
+*.pyc
+*.log
+media/
+*.sqlite3
+project_dump.txt
+all_code.txt
+file.paths.txt
+file_paths.txt

@@ -58,3 +58,11 @@ def purchase(request):
     template_data['title'] = 'Purchase confirmation'
     template_data['order_id'] = order.id
     return render(request, 'cart/purchase.html', {'template_data': template_data})
+
+def top_comments(request):
+    top_reviews = Review.objects.order_by('-likes')[:20]
+    template_data = {
+        'title': 'Top Comments',
+        'top_reviews': top_reviews
+    }
+    return render(request, 'movies/top_comments.html', {'template_data': template_data})

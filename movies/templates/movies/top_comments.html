@@ -1,0 +1,17 @@
+<h1>{{ template_data.title }}</h1>
+
+{% if template_data.top_reviews %}
+    <ul>
+    {% for review in template_data.top_reviews %}
+        <li>
+            <p><strong>{{ review.user.username }}</strong> said:</p>
+            <blockquote>"{{ review.comment }}"</blockquote>
+            <p><strong>Likes:</strong> {{ review.likes }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No comments available yet.</p>
+{% endif %}
+
+
